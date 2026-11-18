@@ -1,0 +1,10 @@
+# Tool-generated local files
+*.pdsbak
+*.pdsprj.user
+*.log
+*.tmp
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Keep future CAD source and fabrication outputs under version control.
