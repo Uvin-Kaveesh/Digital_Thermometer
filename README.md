@@ -16,14 +16,9 @@ An analog, two-digit temperature display designed for the IE2044 Systems Modelli
 
 ## At a glance
 
-| Item | Design |
-| --- | --- |
-| Intended range | 0–99 °C |
-| Sensor | LM35, nominal 10 mV/°C |
-| Conversion and display driver | ICL7107, DIP-40 |
-| Display | Two seven-segment digits |
-| Supply | +5 V and −5 V rails for the converter |
-| Tools | Proteus and EasyEDA Pro |
+![Project snapshot: 0–99 °C range, LM35 sensor, ICL7107 driver, and dual supply](docs/images/project-snapshot.svg)
+
+The design uses an LM35 sensor, an ICL7107 in a DIP-40 package, and two seven-segment digits.
 
 ## How it works
 
@@ -35,28 +30,40 @@ An analog, two-digit temperature display designed for the IE2044 Systems Modelli
 
 The LM35 nominally produces `Vout = temperature (°C) × 10 mV`. For example, 25 °C corresponds to 250 mV. The ICL7107 reference and input scaling must be calibrated together so the displayed number corresponds to degrees Celsius. The assignment specifies a 100 mV reference; the submitted report also describes a 10:1 input divider. **Do not assume that setting the reference alone makes the display accurate.** Verify the actual transfer function and component values against the ICL7107 datasheet and measured circuit before fabrication or relying on a reading.
 
-## Design gallery
+## From simulation to prototype
 
-| Proteus simulation | PCB routing |
-| --- | --- |
-| ![Proteus simulation](docs/images/simulation-2.png) | ![EasyEDA PCB layout](docs/images/pcb-design-1.png) |
+### 01 · Simulate the circuit
 
-| PCB 3D preview | Breadboard prototype |
-| --- | --- |
-| ![PCB 3D preview](docs/images/pcb-design-3.jpg) | ![Breadboard prototype](docs/images/prototype-1.jpg) |
+The Proteus model connects the sensor, input scaling, reference network, converter, and display.
 
-## Project evidence
+![Proteus circuit simulation](docs/images/simulation-2.png)
 
-| Artifact | What it shows |
-| --- | --- |
-| [Final report](docs/IE2044_Assignment_Group_08.pdf) | Design method, component selection, calculations, simulation, PCB views, and discussion |
-| [Proteus circuit screenshot](docs/images/simulation-2.png) | Simulated circuit and display |
-| [EasyEDA schematic screenshot](docs/images/simulation-results-1.png) | Schematic captured in the report |
-| [PCB layout](docs/images/pcb-design-1.png) | Routed board view |
-| [PCB 3D view](docs/images/pcb-design-4.png) | Component placement and display alignment |
-| [Breadboard prototype](docs/images/prototype-1.jpg) | Physical test setup pictured in the report |
+### 02 · Route the board
 
-The images were extracted from the submitted report. See [design notes](docs/design-notes.md) and [verification status](docs/verification.md) for details.
+The EasyEDA Pro layout places the DIP-40 converter between the analog circuitry and aligned display footprints.
+
+![EasyEDA PCB routing](docs/images/pcb-design-1.png)
+
+### 03 · Explore the assembled view
+
+The 3D preview shows the intended component placement and two-digit front panel.
+
+![EasyEDA PCB 3D preview](docs/images/pcb-design-3.jpg)
+
+### 04 · Build a breadboard prototype
+
+The submitted report includes a photo of the physical test setup.
+
+![Breadboard prototype](docs/images/prototype-1.jpg)
+
+## Explore the project
+
+- **[Final report](docs/IE2044_Assignment_Group_08.pdf)** — design method, calculations, simulation, PCB views, and discussion.
+- **[Design notes](docs/design-notes.md)** — signal path, layout considerations, power, and calibration.
+- **[Verification status](docs/verification.md)** — what the supplied evidence shows and what still needs measurement.
+- **[EasyEDA schematic](docs/images/simulation-results-1.png)** — schematic screenshot extracted from the report.
+
+The images in this repository were extracted from the submitted report.
 
 ## Reproducing the design
 

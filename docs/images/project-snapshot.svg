@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 208" role="img" aria-labelledby="title desc">
+  <title id="title">Digital thermometer project snapshot</title>
+  <desc id="desc">Intended 0 to 99 degrees Celsius range, LM35 sensor, ICL7107 display driver, and plus or minus 5 volt supply.</desc>
+  <rect width="960" height="208" rx="23" fill="#0b1220"/>
+  <rect x="1" y="1" width="958" height="206" rx="22" fill="none" stroke="#29415a" stroke-width="2"/>
+  <text x="34" y="40" fill="#edf6ff" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">PROJECT SNAPSHOT</text>
+  <text x="34" y="64" fill="#91a9c0" font-family="Segoe UI, Arial, sans-serif" font-size="14">Analog sensing  ·  direct seven-segment output  ·  Proteus + EasyEDA Pro</text>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="30" y="85" width="210" height="94" rx="14" fill="#142238" stroke="#29415a"/>
+    <rect x="260" y="85" width="210" height="94" rx="14" fill="#142238" stroke="#29415a"/>
+    <rect x="490" y="85" width="210" height="94" rx="14" fill="#142238" stroke="#29415a"/>
+    <rect x="720" y="85" width="210" height="94" rx="14" fill="#142238" stroke="#29415a"/>
+    <text x="47" y="119" fill="#ffca64" font-size="27" font-weight="700">0–99 °C</text>
+    <text x="47" y="150" fill="#91a9c0" font-size="14">INTENDED RANGE</text>
+    <text x="277" y="119" fill="#54d4e8" font-size="27" font-weight="700">LM35</text>
+    <text x="277" y="150" fill="#91a9c0" font-size="14">10 mV / °C SENSOR</text>
+    <text x="507" y="119" fill="#75e3b0" font-size="27" font-weight="700">ICL7107</text>
+    <text x="507" y="150" fill="#91a9c0" font-size="14">ADC + DISPLAY DRIVER</text>
+    <text x="737" y="119" fill="#ffca64" font-size="27" font-weight="700">±5 V</text>
+    <text x="737" y="150" fill="#91a9c0" font-size="14">CONVERTER SUPPLY</text>
+  </g>
+</svg>
