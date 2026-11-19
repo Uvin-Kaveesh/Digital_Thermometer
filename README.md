@@ -27,11 +27,11 @@ An analog, two-digit temperature display designed for the IE2044 Systems Modelli
 
 ## How it works
 
-```text
-Temperature → LM35 → input scaling → ICL7107 → seven-segment display
-                              ↑             ↑
-                        calibration     ±5 V supply
-```
+![Animated conceptual signal flow from temperature through the LM35 and ICL7107 to a two-digit display](docs/images/signal-flow.gif)
+
+*Conceptual animation showing ideal values. It is not footage of a measured prototype.*
+
+`Temperature → LM35 → input scaling → ICL7107 → seven-segment display`
 
 The LM35 nominally produces `Vout = temperature (°C) × 10 mV`. For example, 25 °C corresponds to 250 mV. The ICL7107 reference and input scaling must be calibrated together so the displayed number corresponds to degrees Celsius. The assignment specifies a 100 mV reference; the submitted report also describes a 10:1 input divider. **Do not assume that setting the reference alone makes the display accurate.** Verify the actual transfer function and component values against the ICL7107 datasheet and measured circuit before fabrication or relying on a reading.
 
