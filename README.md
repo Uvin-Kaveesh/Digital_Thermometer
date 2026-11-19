@@ -1,8 +1,18 @@
+<div align="center">
+
 # LM35 + ICL7107 Digital Thermometer
 
-An analog, two-digit temperature display designed for the IE2044 Systems Modelling and Prototyping assignment at SLIIT. An LM35 produces a voltage proportional to temperature; an ICL7107 converts the signal and drives two seven-segment displays. The work includes Proteus simulation, an EasyEDA Pro PCB layout, and a breadboard prototype.
+**An analog temperature display, from sensor signal to PCB layout.**
 
-![PCB layout](docs/images/pcb-design-1.png)
+`LM35` · `ICL7107` · `Proteus` · `EasyEDA Pro` · `PCB Design`
+
+![3D view of the thermometer PCB](docs/images/pcb-design-4.png)
+
+*EasyEDA Pro 3D preview from the submitted design report*
+
+</div>
+
+An analog, two-digit temperature display designed for the IE2044 Systems Modelling and Prototyping assignment at SLIIT. An LM35 produces a voltage proportional to temperature; an ICL7107 converts the signal and drives two seven-segment displays. The work includes Proteus simulation, an EasyEDA Pro PCB layout, and a breadboard prototype.
 
 ## At a glance
 
@@ -24,6 +34,16 @@ Temperature → LM35 → input scaling → ICL7107 → seven-segment display
 ```
 
 The LM35 nominally produces `Vout = temperature (°C) × 10 mV`. For example, 25 °C corresponds to 250 mV. The ICL7107 reference and input scaling must be calibrated together so the displayed number corresponds to degrees Celsius. The assignment specifies a 100 mV reference; the submitted report also describes a 10:1 input divider. **Do not assume that setting the reference alone makes the display accurate.** Verify the actual transfer function and component values against the ICL7107 datasheet and measured circuit before fabrication or relying on a reading.
+
+## Design gallery
+
+| Proteus simulation | PCB routing |
+| --- | --- |
+| ![Proteus simulation](docs/images/simulation-2.png) | ![EasyEDA PCB layout](docs/images/pcb-design-1.png) |
+
+| PCB 3D preview | Breadboard prototype |
+| --- | --- |
+| ![PCB 3D preview](docs/images/pcb-design-3.jpg) | ![Breadboard prototype](docs/images/prototype-1.jpg) |
 
 ## Project evidence
 
